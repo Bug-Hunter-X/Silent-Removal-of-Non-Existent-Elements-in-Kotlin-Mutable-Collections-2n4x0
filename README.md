@@ -1,0 +1,3 @@
+This repository demonstrates a potential issue in Kotlin regarding the silent removal of non-existent elements from mutable collections (Lists, Sets, and Maps).  The `remove()` function for these collections returns a boolean indicating success or failure, but it doesn't throw an exception when the element is not found. This can be problematic because the code will continue executing without any indication that the removal operation failed, potentially leading to unexpected results or logic errors.
+
+The `bug.kt` file shows examples of this behavior with Lists, Sets, and Maps. The `bugSolution.kt` file offers a suggested approach to handle this issue more robustly by explicitly checking the return value of the `remove()` function.
